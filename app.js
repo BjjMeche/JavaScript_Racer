@@ -1,14 +1,14 @@
-
-var racetrackAdditionalLength =  null
 var playerOneTrack = $("#player1_strip")
 var playerTwoTrack = $("#player2_strip")
 var player1="Human 1"
 var player2="Human 2"
 var racetrackLength = 4
 var carLocation=[]
+
 var resetGame =  function(){
   location.reload()
 }
+
 function additionalTrackLength(){
   stringLength = $("#racetrackAddLength")[0].value
   addLength = parseInt(stringLength)
@@ -32,7 +32,7 @@ function assignPlayers(){
   player2 = prompt("Player 2 Name")
 }
 
-function jsRacerGame(e){
+function listen(e){
   if(e.charCode == 97){
     carLocation = carCurrentLocation(playerOneTrack)
     moveCar(playerOneTrack,carLocation)
@@ -62,9 +62,9 @@ function moveCar(carTrack, carLocation){
 function checkWinner(carLocation, racetrackLength, player){
   if(carLocation + 1 === racetrackLength){
     console.log(player + " is the winner")
-    window.removeEventListener("keypress", jsRacerGame)
+    window.removeEventListener("keypress", listen)
     resetGame()
   }
 }
 
-window.addEventListener("keypress", jsRacerGame)
+window.addEventListener("keypress", listen)
