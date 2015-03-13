@@ -19,11 +19,22 @@ OOJS:
 *Player Controls[Player 1: a, Player2: l]*
 
 bits and pieces of reflexion:
+-Built using OOP pattern.
+-Added more LOC
+-Added slightly more amount of time to encapsulate everything into objects and interact with one another.
+-Still runs off of 1 event listener placed at the bottom.
+
+
+-Object literals can hold both variable attributes and functions.
+
+  In this design pattern, objects are very intertwined with their knowing their state, knowing how to display themselves on the DOM, and how to behave when a key event is hit. To me, this is OK because the game is so small. If it was to scale up, it would become unwieldy to keep track of all of the objects and its functions. We can separate each object to its own file to handle this OR move to MVC.
+
+I was pretty happy with this version of JS_Racer. There are Player, Racetrack, Engine, and Game Objects that know of its own properties and functions. A plus to separating everything into its own module is that it adds scope to protect its variables.
 
 MVC JS:
 Player Controls, User[s] select.
 
 bits and pieces of reflexion:
-
+[pending]
 
 I hope you have much much more fun playing this game than I did writing it.
