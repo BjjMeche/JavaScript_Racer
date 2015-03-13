@@ -1,19 +1,49 @@
 function View(){
-  this.car = ".active" // probably want to rename class to car
-  this.racetrack1 = "#player1_strip"
-  this.racetrack2 = "#player2_strip"
+  this.car = ".active" // kept as active for easier cross file comparison
+  this.carCount = 0
+  this.raceway = ".racer_table"
+  this.racetrack = []
+  this.player_strips = []
 }
 
 View.prototype = {
   getCars: function(){
     return $(this.car)
   },
-  track1: function(){
-    return $(this.racetrack1)
+  getCarsCount: function(){
+    return $(this.car).length
   },
-  track2: function(){
-    return $(this.racetrack2)
+  getRaceway: function(){
+    return $(this.raceway)
   },
-
-
+  setCarCount: function(playerCount){
+    this.carCount =  playerCount
+  },
+  addRacetracks: function(){
+    for(var i=0; i<this.carCount; i++){
+      this.player_strips.push("player_strip_"+(i+1))
+      this.getRaceway().append('<tr id="player_strip_'+(i+1)+'"><td class="active">R</td><td>A</td><td>C</td><td>E</td></tr>')
+    }
+  },
+  addTrackLength: function(additionalLength){
+    $.each(this.player_strips, function(index, value){
+      for(var i = 0 ; i< additionalLength; i++){
+        $("#"+value).append("<td></td>")
+      }
+    })
+  },
+  renderInitial: function(additionalLength){
+    this.addRacetracks()
+    this.addTrackLength(additionalLength)
+  },
+  renderCarMotion: function(e){
+    //"this" is set to controller.game
+    for(var i=0; i<this.cars.length; i++){
+      if(e.charCode == this.cars[i].driverControlKey){
+        $("#player_strip_"+(this.cars[i].track.id+1)).find(".active").removeClass()
+        $("#player_strip_"+(this.cars[i].track.id+1)).children().eq(this.cars[i].track.carLocation).addClass("active")
+      }
+    }
+  },
 }
+

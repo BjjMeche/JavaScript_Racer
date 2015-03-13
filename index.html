@@ -5,29 +5,15 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<input type="integer" id="racetrackAddLength">
- <button onclick="racetrack.additionalTrackLength()" id="setTrackButton">Add Track Length</button>
- <button onclick="players.assignPlayers()" id="setTrack">Assign Player's Names</button>
- <button onclick="game.resetGame()" id="reset">Reset Game</button>
-<table class="racer_table">
-  <tr id="player1_strip">
-    <td class="active">R</td>
-    <td>A</td>
-    <td>C</td>
-    <td>E</td>
-  </tr>
-  <tr id="player2_strip">
-    <td class="active">R</td>
-    <td>A</td>
-    <td>C</td>
-    <td>E</td>
-  </tr>
-</table>
+  <button onclick="controller.setupGame()" id="startButton">Play!</button>
+  <button onclick="controller.game.restart()" id="reset">Reset Game</button>
+  <table class="racer_table">
+  </table>
 </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript"  src="app.js"></script>
-  <script type="text/javascript"  src="model.js"></script>
-  <script type="text/javascript"  src="view.js"></script>
-  <script type="text/javascript"  src="controller.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript"  src="app.js"></script>
+<script type="text/javascript"  src="model.js"></script>
+<script type="text/javascript"  src="view.js"></script>
+<script type="text/javascript"  src="controller.js"></script>
 
 </html>
