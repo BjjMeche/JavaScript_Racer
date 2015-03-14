@@ -3,17 +3,17 @@ JavaScript Racer game is written in 3 different architectural patterns: [Spaghet
 
 I wrote the game 3 different ways to demonstrate the differences in each structure. I kept the styling to a bare minimum so you can focus on what really matters, the code.
 
-For Spaghetti Code and OOJS: the controls are lowercase A and L.
-For MVC the controls are set at the beginning of the game.
+Spaghetti Code and OOJS: the controls are lowercase A and L. <br />
+MVC the controls are set at the beginning of the game. <br />
 
 ## Spaghetti Code
 #### code reflection:
 -fastest to get up and running of the 3 patterns. <br />
 -Its pretty cool that this all runs with 1 event listener placed at the very bottom. <br />
 
-  All global variables are placed up top because of my personal preference.They could have been nested between functions, but that would not have been good for readability.  The functions could be placed anywhere because in JS, they are first class citizens. They are compiled first by the JS compiler and made readily available throughout the program. I placed them on the bottom to separate properties and behaviors.
+All global variables are placed up top because of my personal preference.They could have been nested between functions, but that would not have been good for readability.  The functions could be placed anywhere because in JS, they are first class citizens. They are compiled first by the JS compiler and made readily available throughout the program. I placed them on the bottom to separate properties and behaviors.
 
-## OOJS:
+## OOJS
 #### code reflection:
 -Added more LOC for same functionality. <br />
 -Added more amount of time to encapsulate everything into objects and interact with one another. <br />
