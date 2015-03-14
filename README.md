@@ -8,8 +8,8 @@ For MVC the controls are set at the beginning of the game.
 
 ## Spaghetti Code
 #### code reflection:
--fastest to get up and running of the 3 patterns.
--Its pretty cool that this all runs with 1 event listener placed at the very bottom.
+-fastest to get up and running of the 3 patterns. <br />
+-Its pretty cool that this all runs with 1 event listener placed at the very bottom. <br />
 
   All global variables are placed up top because of my personal preference.They could have been nested between functions, but that would not have been good for readability.  The functions could be placed anywhere because in JS, they are first class citizens. They are compiled first by the JS compiler and made readily available throughout the program. I placed them on the bottom to separate properties and behaviors.
 
