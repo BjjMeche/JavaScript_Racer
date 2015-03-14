@@ -52,7 +52,7 @@ As we have seen, we can build JS_Racer using Spaghetti Code and OOJS just fine w
 
 So how do we intertwine the Model and View with the Controller? We pass both Model and View into our Controller as arguments. This gives our controller the ability to access both model and view properties. The controller acts as a controller in the sense that it controls which events are being executed, NOT how they behave when executed(e.g. The controller doesn't know how to re-render the View, but it does know how to call the view which has a re-render function. The controller doesn't have the logic to check if there is a winner, but it does have access to the model which knows how to check if there is a winner).
 
-### --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
+### --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- --- ---
 Thanks for checkout out the repo. That's all I have for you!
 
 I hope with my examples and explanations, you now have a better understanding of Spaghetti Code, OOJS, and MVC JS.
