@@ -15,10 +15,10 @@ For MVC the controls are set at the beginning of the game.
 
 ## OOJS:
 #### code reflection:
--Added more LOC for same functionality
--Added more amount of time to encapsulate everything into objects and interact with one another.
--Runs off of 1 event listener.
--Object literals can hold both variable attributes and functions.
+-Added more LOC for same functionality. <br />
+-Added more amount of time to encapsulate everything into objects and interact with one another. <br />
+-Runs off of 1 event listener. <br />
+-Object literals can hold both variable attributes and functions. <br />
 
 In this design pattern, objects are very intertwined with their knowing their state, knowing how to display themselves on the DOM, and how to behave when a key event is hit. To me, this is OK because the game is so small. If it was to scale up, it would become unwieldy to keep track of all of the objects and its functions. We can separate each object to its own file to deal with this OR move to MVC.
 
@@ -26,9 +26,9 @@ I was pretty happy with this version of JS_Racer. There are Player, Racetrack, E
 
 ## MVC JS
 #### code reflection:
--Most Challenging way to implement JS_Racer
--Difficult at first to conceptualize what belongs to the View, Model, and Controller.
--Substantially more LOCs.
+-Most Challenging way to implement JS_Racer. <br />
+-Difficult at first to conceptualize what belongs to the View, Model, and Controller. <br />
+-Substantially more LOCs. <br />
 
 Lets talk about MVC.
 
