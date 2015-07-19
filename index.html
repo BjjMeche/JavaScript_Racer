@@ -3,9 +3,17 @@
   <title>JS Racer</title>
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="app.js"></script>
 </head>
 <body>
-
+  <button onclick="controller.setupGame()" id="startButton">Play!</button>
+  <button onclick="controller.game.restart()" id="reset">Reset Game</button>
+  <table class="racer_table">
+  </table>
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript"  src="app.js"></script>
+<script type="text/javascript"  src="model.js"></script>
+<script type="text/javascript"  src="view.js"></script>
+<script type="text/javascript"  src="controller.js"></script>
+
 </html>
